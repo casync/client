@@ -1,4 +1,5 @@
 import { styled } from "@linaria/react";
+import { Button } from "./components";
 import { withTheme } from "./theme/theme";
 
 const StyledHeader = styled.h1`
@@ -11,6 +12,8 @@ function App() {
   return (
     <div className="App">
       <Header>Test</Header>
+      <Button color="blue">test</Button>
+      <Typography>asdasdasd</Typography>
     </div>
   );
 }
