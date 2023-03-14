@@ -1,5 +1,5 @@
 import { styled } from "@linaria/react";
-import React from "react";
+import React, { useState } from "react";
 import { withTheme } from "../theme/theme";
 
 const StyledButton = styled.button`
@@ -9,6 +9,7 @@ const StyledButton = styled.button`
   border: white;
   border-radius: 6px;
   font-weight: 700;
+  cursor: pointer;
 `;
 
 export const Button = withTheme(({ theme, children }) => (

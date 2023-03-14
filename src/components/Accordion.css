@@ -1,0 +1,18 @@
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion {
+  width: 500px;
+}
+
+.title {
+  background-color: #e2e2e2;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.content {
+  padding: 5px 20px;
+  background-color: rgb(247, 247, 247);
+}
