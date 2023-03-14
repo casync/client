@@ -3,7 +3,7 @@ import React from "react";
 import { withTheme } from "../theme/theme";
 
 const StyledButton = styled.button`
-  color: ${(props) => props.theme.colors.blueMain};
+  color: ${(props) => props.theme.colors.blueDark};
   background: #FFF;
   border-radius: 5px;
   padding: 6px 12px;
