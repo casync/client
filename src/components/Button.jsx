@@ -3,8 +3,12 @@ import React from "react";
 import { withTheme } from "../theme/theme";
 
 const StyledButton = styled.button`
-  color: ${(props) => props.theme.colors.primary};
-  background: #000;
+  color: #FFF;
+  background: ${(props) => props.theme.colors.primary};
+  padding: 6px 12px;
+  border: white;
+  border-radius: 6px;
+  font-weight: 700;
 `;
 
 export const Button = withTheme(({ theme, children }) => (
