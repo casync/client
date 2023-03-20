@@ -1,4 +1,4 @@
-export const accordion = [
+const data = [
   {
     title: 'Lorem ipsum dolor sit amet?',
     content:
@@ -15,3 +15,5 @@ export const accordion = [
       'Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque.',
   },
 ];
+
+export default data
