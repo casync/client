@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
-import data from './data';
-import './Accordion.css';
+import React, { useState } from "react";
+import StyledAccordion from "./Accordion.styled";
 
 export function Accordion({ title, content }) {
   const [toggle, setToggle] = useState(false);
 
   const accordionToggle = () => {
-    setToggle(!toggle);
+    setToggle((oldState) => {
+      return !oldState;
+    });
   };
 
   return (
-    <div className="accordion">
-      <h2 className="title" onClick={accordionToggle}>
-        {title}
-      </h2>
-      <div className="content">{toggle && <p>{content}</p>}</div>
-    </div>
+    <StyledAccordion>
+      <div onClick={accordionToggle}>{title}</div>
+      <div>{toggle && content}</div>
+    </StyledAccordion>
   );
 }
