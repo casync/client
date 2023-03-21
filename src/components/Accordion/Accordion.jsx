@@ -5,9 +5,7 @@ export function Accordion({ title, content }) {
   const [toggle, setToggle] = useState(false);
 
   const accordionToggle = () => {
-    setToggle((oldState) => {
-      return !oldState;
-    });
+    setToggle((oldState) => !oldState);
   };
 
   return (
