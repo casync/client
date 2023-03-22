@@ -4,7 +4,13 @@ import StyledButton from "./Button.styled";
 export function Button(props) {
   return (
     <>
-      <StyledButton>{props.children}</StyledButton>
+      <StyledButton
+        whileTap={{
+          scale: 0.95,
+        }}
+      >
+        {props.children}
+      </StyledButton>
     </>
   );
 }
