@@ -6,7 +6,7 @@ export default {
   title: "Button",
   component: Button,
   args: {
-    children: "Texto do botão",
+    children: "Texto do Botão",
   },
 };
 
