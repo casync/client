@@ -6,7 +6,7 @@ export function Button(props) {
     <>
       <StyledButton
         whileTap={{
-          scale: 0.95,
+          scale: 0.9,
         }}
       >
         {props.children}

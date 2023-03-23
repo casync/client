@@ -3,13 +3,8 @@ import { theme } from "./theme/theme";
 import styled, { ThemeProvider } from "styled-components";
 import { Button } from "./components/Button/Button";
 import { Accordion } from "./components/Accordion/Accordion";
-import { motion } from "framer-motion";
 
 function App() {
-  const child = {
-    variantA: { bottom: 0, right: 0, rotate: 0 },
-    variantB: { top: 0, left: 0 },
-  };
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -20,7 +15,7 @@ function App() {
           content={
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
-              maiores tempore dolorem nemo molestiae corporis quia animi
+              maiores tempore dolorem nemo molestiae corporis quia
             </p>
           }
         ></Accordion>

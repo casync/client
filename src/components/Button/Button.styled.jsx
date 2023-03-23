@@ -5,6 +5,7 @@ const StyledButton = styled(motion.button)`
   cursor: pointer;
   background-color: ${({ theme }) => theme.colors.primary};
   padding: 6px 12px;
+  scale: 1.25;
   color: #fff;
   border: none;
   display: block;
