@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "./Button";
+import Button from "./Button.styled";
 
 export default {
   title: "Button",
@@ -10,8 +10,12 @@ export default {
   },
 };
 
-const Template = ({ children, ...rest }) => <Button>{children}</Button>;
+const p = ({ children, ...rest }) => <Button>{children}</Button>;
 
-export const Basic = Template.bind({});
+const s = (props) => <Button secondary>{props.children}</Button>;
 
-Basic.args = {};
+export const Default = p.bind({});
+export const Secondary = s.bind({});
+
+p.args = {};
+s.args = {};

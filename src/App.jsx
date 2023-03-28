@@ -1,6 +1,6 @@
 import GlobalStyles from "./theme/Global";
 import { theme } from "./theme/theme";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { Button } from "./components/Button/Button";
 import { Accordion } from "./components/Accordion/Accordion";
 

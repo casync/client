@@ -1,9 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
+import { theme } from "../../theme/theme";
 
 const StyledButton = styled(motion.button)`
   cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${(props) =>
+    props.secondary ? theme.colors.secondary : theme.colors.primary};
   padding: 6px 12px;
   scale: 1.25;
   color: #fff;
