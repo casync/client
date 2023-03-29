@@ -9,6 +9,8 @@ const StyledButton = styled(motion.button)`
   padding: 6px 12px;
   scale: 1.25;
   color: #fff;
+  font-size: ${(props) =>
+    props.large ? "1.35rem" : "1rem"};
   border: none;
   display: block;
   margin: 20px auto 0;

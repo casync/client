@@ -10,12 +10,9 @@ export default {
   },
 };
 
-const p = ({ children, ...rest }) => <Button>{children}</Button>;
+const p = ({ children }) => <Button>{children}</Button>;
 
-const s = (props) => <Button secondary>{props.children}</Button>;
+const s = ({ children }) => <Button secondary large>{children}</Button>;
 
 export const Default = p.bind({});
 export const Secondary = s.bind({});
-
-p.args = {};
-s.args = {};

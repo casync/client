@@ -6,6 +6,7 @@ export function Button(props) {
     <>
       <StyledButton
         secondary
+        large
         whileTap={{
           y: 1,
           scale: 0.9,
