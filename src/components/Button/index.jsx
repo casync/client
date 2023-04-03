@@ -1,19 +1,18 @@
 import React from "react";
-import StyledButton from "./Button.styled";
+import * as S from "./styled";
+import { theme } from "../../theme/theme";
 
 export function Button(props) {
   return (
     <>
-      <StyledButton
-        secondary
-        large
+      <S.Wrapper
         whileTap={{
           y: 1,
           scale: 0.9,
         }}
       >
         {props.children}
-      </StyledButton>
+      </S.Wrapper>
     </>
   );
 }

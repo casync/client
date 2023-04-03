@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import StyledAccordion from "./Accordion.styled";
+import * as S from "./styled";
 
 export function Accordion({ title, content }) {
   const [toggle, setToggle] = useState(false);
@@ -10,7 +10,7 @@ export function Accordion({ title, content }) {
   };
 
   return (
-    <StyledAccordion>
+    <S.Wrapper>
       <motion.div onClick={accordionToggle}>{title}</motion.div>
       <motion.div layout>
         {toggle && (
@@ -28,6 +28,6 @@ export function Accordion({ title, content }) {
           </motion.div>
         )}
       </motion.div>
-    </StyledAccordion>
+    </S.Wrapper>
   );
 }

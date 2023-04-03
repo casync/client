@@ -1,8 +1,8 @@
 import GlobalStyles from "./theme/Global";
 import { theme } from "./theme/theme";
 import { ThemeProvider } from "styled-components";
-import { Button } from "./components/Button/Button";
-import { Accordion } from "./components/Accordion/Accordion";
+import { Button } from "./components/Button";
+import { Accordion } from "./components/Accordion/";
 
 function App() {
   return (
