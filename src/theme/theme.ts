@@ -1,6 +1,3 @@
-import { createTheming } from "@callstack/react-theme-provider";
-import { styled } from "@linaria/react";
-
 export const theme = {
   font: {
     family: {
@@ -110,5 +107,3 @@ export const theme = {
     auxYellow: "#F2D049",
   },
 } as const;
-
-export const { ThemeProvider, withTheme, useTheme } = createTheming(theme);

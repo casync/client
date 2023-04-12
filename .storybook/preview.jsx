@@ -1,18 +1,15 @@
-import { createTheming } from "@callstack/react-theme-provider";
-import { theme, ThemeProvider, useTheme } from "../src/theme/theme";
-
-function MyThemeProvider(props) {
-  const { children } = props;
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-}
-
+import GlobalStyles from "../src/theme/Global";
+import { theme } from "../src/theme/theme";
+import { ThemeProvider } from "styled-components";
 export const decorators = [
   (Story, context) => {
-    const theme = useTheme();
     return (
-      <MyThemeProvider theme={theme}>
-        <Story {...context} />
-      </MyThemeProvider>
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <Story {...context} />
+        </>
+      </ThemeProvider>
     );
   },
 ];

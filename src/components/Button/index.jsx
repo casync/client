@@ -1,14 +1,18 @@
-import { styled } from "@linaria/react";
 import React from "react";
-import { withTheme } from "../../theme/theme";
+import * as S from "./styled";
 
-const StyledButton = styled.button`
-  color: ${(props) => props.theme.colors.primary};
-  background: #000;
-`;
-
-export const Button = withTheme(({ theme, children, color }) => (
-  <StyledButton style={{ backgroundColor: color }} theme={theme}>
-    {children}
-  </StyledButton>
-));
+export function Button(props) {
+  return (
+    <S.Wrapper
+      whileTap={{
+        y: 1,
+        scale: 0.9,
+      }}
+      size="1.2rem"
+      color="dodgerblue"
+      variant="solid"
+    >
+      {props.children}
+    </S.Wrapper>
+  );
+}

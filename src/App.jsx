@@ -1,20 +1,26 @@
-import { styled } from "@linaria/react";
-import { Button } from "./components";
-import { withTheme } from "./theme/theme";
-
-const StyledHeader = styled.h1`
-  color: ${(props) => props.theme.colors.primary};
-`;
-
-const Header = withTheme(StyledHeader);
+import GlobalStyles from "./theme/Global";
+import { theme } from "./theme/theme";
+import { ThemeProvider } from "styled-components";
+import { Button } from "./components/Button";
+import { Accordion } from "./components/Accordion/";
 
 function App() {
   return (
-    <div className="App">
-      <Header>Test</Header>
-      <Button color="blue">test</Button>
-      <Typography>asdasdasd</Typography>
-    </div>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <Button>Button</Button>
+        <Accordion
+          title={<h1>Default title</h1>}
+          content={
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
+              maiores tempore dolorem nemo molestiae corporis quia
+            </p>
+          }
+        ></Accordion>
+      </>
+    </ThemeProvider>
   );
 }
 
