@@ -7,7 +7,7 @@ export default {
   args: {
     children: "Button",
     color: "#282828",
-    size: "1.1rem",
+    size: "medium",
   },
 };
 

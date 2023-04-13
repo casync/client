@@ -2,16 +2,18 @@ import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
 
 export const Wrapper = styled(motion.button)`
-  ${({ theme, size }) => css`
+  ${({ theme, color }) => css`
     cursor: pointer;
     border: solid 2px;
     padding: 10px 20px;
     color: #fff;
-    font-size: ${size ? size : "16px"};
     font-weight: 500;
+    font-size: 16px;
+    background-color: ${color ? color : theme.colors.primary};
+    border-radius: 16px;
+    padding: 10px 20px;
     display: block;
     margin: 20px auto 0;
-    border-radius: 16px;
     ${({ color, variant }) =>
       variant === "solid" &&
       `
@@ -32,6 +34,27 @@ export const Wrapper = styled(motion.button)`
       border: none;
       color: ${color ? color : theme.colors.primary};
       text-decoration: underline;
+    `}
+    ${({ size }) =>
+      size === "large" &&
+      `
+      font-size: 18px;
+      border-radius: 20px;
+      padding: 12px 24px;
+    `}
+    ${({ size }) =>
+      size === "medium" &&
+      `
+      font-size: 16px;
+      border-radius: 16px;
+      padding: 10px 20px;
+    `}
+    ${({ size }) =>
+      size === "small" &&
+      `
+      font-size: 14px;
+      border-radius: 14px;
+      padding: 10px 16px;
     `}
   `},
 `;
