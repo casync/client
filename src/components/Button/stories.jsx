@@ -1,9 +1,9 @@
 import React from "react";
-import * as S from "./styled";
+import { Button } from "./index";
 
 export default {
   title: "Button",
-  component: S.Wrapper,
+  component: Button,
   args: {
     children: "Button",
     color: "#282828",
@@ -12,45 +12,21 @@ export default {
 };
 
 const s = ({ children, color, size }) => (
-  <S.Wrapper
-    whileTap={{
-      y: 1,
-      scale: 0.9,
-    }}
-    size={size}
-    color={color}
-    variant="solid"
-  >
+  <Button size={size} color={color} variant="solid">
     {children}
-  </S.Wrapper>
+  </Button>
 );
 
 const g = ({ children, color, size }) => (
-  <S.Wrapper
-    whileTap={{
-      y: 1,
-      scale: 0.9,
-    }}
-    size={size}
-    color={color}
-    variant="ghost"
-  >
+  <Button size={size} color={color} variant="ghost">
     {children}
-  </S.Wrapper>
+  </Button>
 );
 
 const t = ({ children, color, size }) => (
-  <S.Wrapper
-    whileTap={{
-      y: 1,
-      scale: 0.9,
-    }}
-    size={size}
-    color={color}
-    variant="text"
-  >
+  <Button size={size} color={color} variant="text">
     {children}
-  </S.Wrapper>
+  </Button>
 );
 
 export const Solid = s.bind({});
