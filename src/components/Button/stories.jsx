@@ -26,13 +26,29 @@ const s = ({ children, color, size }) => (
 );
 
 const g = ({ children, color, size }) => (
-  <S.Wrapper size={size} color={color} variant="ghost">
+  <S.Wrapper
+    whileTap={{
+      y: 1,
+      scale: 0.9,
+    }}
+    size={size}
+    color={color}
+    variant="ghost"
+  >
     {children}
   </S.Wrapper>
 );
 
 const t = ({ children, color, size }) => (
-  <S.Wrapper size={size} color={color} variant="text">
+  <S.Wrapper
+    whileTap={{
+      y: 1,
+      scale: 0.9,
+    }}
+    size={size}
+    color={color}
+    variant="text"
+  >
     {children}
   </S.Wrapper>
 );

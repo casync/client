@@ -1,6 +1,5 @@
 const { mergeConfig } = require("vite");
 const { nodeResolve } = require("@rollup/plugin-node-resolve");
-
 module.exports = {
   stories: [
     "../stories/**/*.stories.mdx",
@@ -12,10 +11,11 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-mdx-gfm",
   ],
-  framework: "@storybook/react",
-  core: {
-    builder: "@storybook/builder-vite",
+  framework: {
+    name: "@storybook/react-vite",
+    options: {},
   },
   features: {
     storyStoreV7: true,
@@ -29,5 +29,8 @@ module.exports = {
         }),
       ],
     });
+  },
+  docs: {
+    autodocs: true,
   },
 };
