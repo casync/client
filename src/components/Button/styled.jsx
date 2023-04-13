@@ -5,13 +5,13 @@ export const Wrapper = styled(motion.button)`
   ${({ theme, size }) => css`
     cursor: pointer;
     border: solid 2px;
-    padding: 6px 12px;
+    padding: 10px 20px;
     color: #fff;
-    font-size: ${size};
+    font-size: ${size ? size : "16px"};
+    font-weight: 500;
     display: block;
     margin: 20px auto 0;
-    border-radius: 4px;
-    font-weight: 700;
+    border-radius: 16px;
     ${({ color, variant }) =>
       variant === "solid" &&
       `

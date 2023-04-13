@@ -8,8 +8,7 @@ export function Button(props) {
         y: 1,
         scale: 0.9,
       }}
-      size="1.2rem"
-      color="dodgerblue"
+      color="#282828"
       variant="solid"
     >
       {props.children}

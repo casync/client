@@ -5,14 +5,22 @@ export default {
   title: "Button",
   component: S.Wrapper,
   args: {
-    children: "Texto do Botão",
-    color: "dodgerblue",
+    children: "Button",
+    color: "#282828",
     size: "1.1rem",
   },
 };
 
 const s = ({ children, color, size }) => (
-  <S.Wrapper size={size} color={color} variant="solid">
+  <S.Wrapper
+    whileTap={{
+      y: 1,
+      scale: 0.9,
+    }}
+    size={size}
+    color={color}
+    variant="solid"
+  >
     {children}
   </S.Wrapper>
 );
