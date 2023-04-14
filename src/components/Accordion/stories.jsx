@@ -6,20 +6,13 @@ export default {
   component: Accordion,
   args: {
     title: "Title",
-    content: "Content",
+    content:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati porro, aliquid ullam asperiores laboriosam iusto corporis earum nostrum",
   },
 };
 
-const Template = ({ title, content }) => (
-  <Accordion
-    title={<h2>Title 1</h2>}
-    content={
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
-        porro, aliquid ullam asperiores laboriosam iusto corporis earum nostrum
-      </p>
-    }
-  ></Accordion>
+const Template = ({ content }) => (
+  <Accordion title={<h2>Title</h2>} content={content}></Accordion>
 );
 
 export const Default = Template.bind({});

@@ -1,22 +1,33 @@
 import React from "react";
-import { theme } from "../../theme/theme";
-import * as S from "./styled";
+import { Button } from "./index";
 
 export default {
   title: "Button",
-  component: S.Wrapper,
+  component: Button,
   args: {
-    children: "Texto do Botão",
-    color: "dodgerblue",
-    size: "1.1rem"
+    children: "Button",
+    color: "#282828",
+    size: "medium",
   },
 };
 
-const s = ({ children, color, size }) => <S.Wrapper size={size} color={color} variant="solid">{children}</S.Wrapper>;
+const s = ({ children, color, size }) => (
+  <Button size={size} color={color} variant="solid">
+    {children}
+  </Button>
+);
 
-const g = ({ children, color, size }) => <S.Wrapper size={size} color={color} variant="ghost">{children}</S.Wrapper>;
+const g = ({ children, color, size }) => (
+  <Button size={size} color={color} variant="ghost">
+    {children}
+  </Button>
+);
 
-const t = ({ children, color, size }) => <S.Wrapper size={size} color={color} variant="text">{children}</S.Wrapper>;
+const t = ({ children, color, size }) => (
+  <Button size={size} color={color} variant="text">
+    {children}
+  </Button>
+);
 
 export const Solid = s.bind({});
 export const Ghost = g.bind({});
