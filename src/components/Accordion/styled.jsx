@@ -29,6 +29,6 @@ export const Wrapper = styled(motion.section)`
     /* border-radius: 0 0 5px 5px; */
     :last-child::after {
       content: "";
-    } */
+    }
   }
 `;

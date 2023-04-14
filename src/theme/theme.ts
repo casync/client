@@ -1,7 +1,7 @@
 export const theme = {
   font: {
     family: {
-      primary: "Wotfard, sans-serif",
+      primary: "Inter, sans-serif",
       handwritting: "Kalam, cursive",
     },
     weight: {
