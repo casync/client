@@ -2,7 +2,12 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import * as S from "./styled";
 
-export function Accordion({ title, content }) {
+type Props = {
+  title: string | React.ReactNode,
+  content: string | React.ReactNode,
+}
+
+export function Accordion({ title, content } : Props) {
   const [toggle, setToggle] = useState(false);
 
   const accordionToggle = () => {
