@@ -1,6 +1,10 @@
 import { createGlobalStyle, css } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
+type props = {
+  theme: any,
+}
+
+const GlobalStyles = createGlobalStyle<props>`
   ${({ theme }) => css`
     * {
       margin: 0;
