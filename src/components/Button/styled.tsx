@@ -1,15 +1,13 @@
-import styled, { css } from "styled-components";
+import styled, { css, DefaultTheme } from "styled-components";
 import { motion } from "framer-motion";
+import { ButtonProps } from '.'
 
-type BtnProps = {
-  color: string,
-  variant: string,
-  size: string,
-  theme: any,
-}
+type StyledProps = {
+  theme: DefaultTheme
+} & ButtonProps
 
-export const Wrapper = styled(motion.button)<BtnProps>`
-${({theme, color, size, variant}) => css`
+export const Wrapper = styled(motion.button)`
+${({theme, color, size, variant}: StyledProps) => css` 
     margin: 20px auto 0;
     cursor: pointer;
     background-color: ${color ? color : theme.colors.primary};

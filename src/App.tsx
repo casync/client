@@ -9,7 +9,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Button variant="solid" color="#282828" size="large">
+        <Button color="#282828" size="large">
           Button
         </Button>
         <Accordion

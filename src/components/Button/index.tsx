@@ -1,7 +1,14 @@
 import React from "react";
 import * as S from "./styled";
 
-export function Button({ children, variant, size, color }) {
+export type ButtonProps = {
+  color?: string,
+  variant?: string,
+  size?: string,
+  children: any,
+}
+
+export function Button({ children, variant = "solid", size = "medium", color }: ButtonProps) {
   return (
     <S.Wrapper
       whileTap={{
