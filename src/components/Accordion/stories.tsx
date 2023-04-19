@@ -1,5 +1,4 @@
-import React from "react";
-import { Accordion } from "./index";
+import { Accordion, AccordionProps } from "./index";
 
 export default {
   title: "Accordion",
@@ -11,10 +10,8 @@ export default {
   },
 };
 
-const Template = ({ content }) => (
+const Template = ({ content }: AccordionProps) => (
   <Accordion title={<h2>Title</h2>} content={content}></Accordion>
 );
 
 export const Default = Template.bind({});
-
-Default.args = {};
