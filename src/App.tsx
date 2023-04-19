@@ -9,9 +9,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Button color="#282828" size="large">
-          Button
-        </Button>
+        <Button color="#282828">Button</Button>
         <Accordion
           title={<h1>Default title</h1>}
           content={

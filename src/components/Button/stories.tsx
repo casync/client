@@ -1,5 +1,4 @@
-import React from "react";
-import { Button } from "./index";
+import { Button, ButtonProps } from "./index";
 
 export default {
   title: "Button",
@@ -11,19 +10,19 @@ export default {
   },
 };
 
-const s = ({ children, color, size }) => (
+const s = ({ children, color, size }: ButtonProps) => (
   <Button size={size} color={color} variant="solid">
     {children}
   </Button>
 );
 
-const g = ({ children, color, size }) => (
+const g = ({ children, color, size }: ButtonProps) => (
   <Button size={size} color={color} variant="ghost">
     {children}
   </Button>
 );
 
-const t = ({ children, color, size }) => (
+const t = ({ children, color, size }: ButtonProps) => (
   <Button size={size} color={color} variant="text">
     {children}
   </Button>
